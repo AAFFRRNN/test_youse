@@ -4,6 +4,7 @@ Scenario: Without data
 	Given I am on the site "https://www.youse.com.br/"
 	Then I checked item in main screen
 	When I press item by href "/account"
+	Then I wait for 10 seconds
 	Then I see item by id "email"
 	When I press item by href "/users/sign_up"
 	Then I checked item in register screen
@@ -132,7 +133,7 @@ Scenario: Register user valid and login
 	When I press item by href "/users/sign_up"
 	Then I checked item in register screen
 	When I enter text "Teste" into "user_name"
-		And I enter text "teste_07@gmail.com" into "user_email"
+		And I enter text "teste_10@gmail.com" into "user_email"
 		And I enter text "123456789" into "user_password"
 		And I enter text "123456789" into "user_password_confirmation"
 	When I click button by text "enviar cadastro"
